@@ -15,7 +15,6 @@ public class Tracker implements Observer
 
 	public void update()
 	{
-
 		System.out.println("Temperature is " + weatherStation.getTemperature() + " from " + this.toString());
 	}
 
