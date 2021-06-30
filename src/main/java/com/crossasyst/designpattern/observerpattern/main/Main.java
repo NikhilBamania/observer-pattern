@@ -12,10 +12,23 @@ public class Main
 	public static void main(String[] args)
 	{
 		WeatherStation weatherStation = new WeatherStation();
-		Tracker tracker1 = new Tracker(weatherStation);
-		Tracker tracker2 = new Tracker(weatherStation);
+		new Tracker(weatherStation);
+		new Tracker(weatherStation);
 
-		weatherStation.changeTemp();
+		for (int i = 0; i < 10; i++)
+		{
+
+			try
+			{
+				Thread.sleep(3000);
+			}
+			catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+			weatherStation.changeTemp();
+		}
+
 	}
 
 }

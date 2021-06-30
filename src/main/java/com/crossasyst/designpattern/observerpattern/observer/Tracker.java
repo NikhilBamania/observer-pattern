@@ -6,12 +6,6 @@ import com.crossasyst.designpattern.observerpattern.observable.WeatherStation;
 public class Tracker implements Observer
 {
 	private WeatherStation weatherStation;
-	private float temperature;
-
-	public float getTemperature()
-	{
-		return temperature;
-	}
 
 	public Tracker(WeatherStation weatherStation)
 	{
@@ -21,8 +15,8 @@ public class Tracker implements Observer
 
 	public void update()
 	{
-		temperature = weatherStation.getTemperature();
-		System.out.println("Temperature is " + this.temperature + " from " + this.toString());
+
+		System.out.println("Temperature is " + weatherStation.getTemperature() + " from " + this.toString());
 	}
 
 }
